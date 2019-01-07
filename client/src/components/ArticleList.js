@@ -16,11 +16,26 @@ class ArticleList extends Component {
             })
             .catch(error => console.log(error))
     }
+
+    renderList() {
+        return this.state.articles.map( article => {
+            return(
+                <div key={article.id}>
+                    {/*<Link to={`/articles/${article.id}`}>
+                        <div>{article.title}</div>
+                    </Link>*/}
+                    <h2>{article.title}</h2>
+                    <h5>{article.id}</h5>
+                </div>
+            );
+        });
+    }
+
     render() {
         console.log(this.state.articles);
         return (
             <div className="ArticleList">
-                Articles
+                {this.renderList()}
             </div>
         )
     }
