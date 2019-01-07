@@ -4,7 +4,7 @@ import './ArticleList.css';
 
 class ArticleList extends Component {
     state = {
-            atricles: []
+            articles: []
     }
 
     componentDidMount() {
