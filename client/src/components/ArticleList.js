@@ -4,20 +4,20 @@ import './ArticleList.css';
 
 class ArticleList extends Component {
     state = {
-            lists: []
+            atricles: []
     }
 
     componentDidMount() {
         axios.get('http://localhost:3001/articles.json')
             .then(response => {
                 this.setState({
-                    lists: response.data
+                    articles: response.data
                 })
             })
             .catch(error => console.log(error))
     }
     render() {
-        console.log(this.state.lists);
+        console.log(this.state.articles);
         return (
             <div className="ArticleList">
                 Articles
