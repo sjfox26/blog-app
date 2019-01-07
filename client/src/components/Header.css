@@ -1,0 +1,45 @@
+.header {
+    height: 100vh;
+    background-image: url(../images/lucas-davies-500441-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.heading-primary--main {
+    display: block; /*since span is inline by default, like text*/
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 2.7rem;
+    margin-bottom: 3rem;
+}
+
+.heading-primary--sub {
+     display: block; /*since span is inline by default, like text*/
+     font-size: 2rem;
+     font-weight: 700;
+     letter-spacing: 1.75rem;
+}
+
+.header__text-box {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;  /*centers button*/
+}
+
+.header:after {
+    bottom: 1vh;
+    color: #fff;
+    content: "﹀";
+    font-size: 36px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+}
