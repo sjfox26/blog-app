@@ -1,0 +1,7 @@
+.header__container--article {
+    height: 30vh;
+}
+
+.header__container--article .header:after {
+    content: "";
+}

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { fetchArticles } from '../../actions/index';
 
 import './ArticleList.css';
+import Header from "../Header";
 
 class ArticleList extends Component {
     /*state = {
@@ -28,9 +29,14 @@ class ArticleList extends Component {
         return this.props.articles.map( article => {
             return(
                 <div key={article.id}>
-                    <Link to={`/articles/${article.id}`}>
-                        <h2>{article.title}</h2>
-                        <h5>{article.id}</h5>
+                    <Link to={`/articles/${article.id}`} className="link">
+                        <div className="article__title">
+                            <h2>{article.title}</h2>
+                        </div>
+                        <div className="article__info">
+                            <h3 className="article__info--item">{article.description}</h3>
+                            <h4 className="article__info--item">{article.author}</h4>
+                        </div>
                     </Link>
                 </div>
             );
@@ -40,10 +46,15 @@ class ArticleList extends Component {
     render() {
         //console.log(this.state.articles);
         return (
-            <div className="ArticleList">
-                {this.renderList()}
+            <div>
+                <div className="header__container--list">
+                    <Header />
+                </div>
+                <div className="ArticleList">
+                    {this.renderList()}
+                </div>
             </div>
-        )
+        );
     }
 }
 

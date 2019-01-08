@@ -1,4 +1,25 @@
 .ArticleList {
     margin-top: 3rem;
     background-color: aquamarine;
+    text-transform: uppercase;
 }
+
+.header__container--list {
+    height: 100vh;
+}
+
+.link {
+    text-decoration: none;
+    color: #000;
+    /*font-family: Lato;*/
+}
+
+.article__title {
+    padding: 1rem;
+}
+
+.article__info--item {
+    padding: .3rem;
+}
+
+
