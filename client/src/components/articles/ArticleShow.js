@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchArticle } from '../../actions';
+import { Link } from 'react-router-dom';
 import Header from "../Header";
+
 
 import './ArticleShow.css';
 
@@ -21,16 +23,18 @@ class ArticleShow extends React.Component {
 
     render() {
         if (!this.props.article) {
-            return <div>Loading...</div>
+            return <div></div>
         }
 
         const { title, description, content } = this.props.article;
 
         return (
             <div>
-                <div className="header__container--article">
-                    <Header/>
-                </div>
+                <Link to={'/'} className="link">
+                    <div className="header__container--article">
+                        <Header/>
+                    </div>
+                </Link>
                 <div>
                     <h1>{title}</h1>
                     <h3>{description}</h3>
