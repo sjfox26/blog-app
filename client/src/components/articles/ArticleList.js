@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-//import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { fetchArticles } from '../../actions/index';
 
 import './ArticleList.css';
@@ -28,11 +28,10 @@ class ArticleList extends Component {
         return this.props.articles.map( article => {
             return(
                 <div key={article.id}>
-                    {/*<Link to={`/articles/${article.id}`}>
-                        <div>{article.title}</div>
-                    </Link>*/}
-                    <h2>{article.title}</h2>
-                    <h5>{article.id}</h5>
+                    <Link to={`/articles/${article.id}`}>
+                        <h2>{article.title}</h2>
+                        <h5>{article.id}</h5>
+                    </Link>
                 </div>
             );
         });
