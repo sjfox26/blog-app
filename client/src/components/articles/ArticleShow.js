@@ -10,6 +10,15 @@ class ArticleShow extends React.Component {
         this.props.fetchArticle(this.props.match.params.id);
     }
 
+    renderContent(text) {
+        return (
+            <div>
+                {text.split("\n").map((p,key) => {
+                    return <p key={key}>{p}</p>;
+                })}
+            </div>);
+    }
+
     render() {
         if (!this.props.article) {
             return <div>Loading...</div>
@@ -25,7 +34,7 @@ class ArticleShow extends React.Component {
                 <div>
                     <h1>{title}</h1>
                     <h3>{description}</h3>
-                    <h5>{content}</h5>
+                    <h5>{this.renderContent(content)}</h5>
                 </div>
             </div>
         );
