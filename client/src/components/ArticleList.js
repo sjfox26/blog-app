@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import { connect } from 'react-redux';
+//import axios from 'axios';
+import { fetchArticles } from '../actions';
+
 import './ArticleList.css';
 
 class ArticleList extends Component {
-    state = {
+    /*state = {
             articles: []
-    }
+    }*/
 
-    componentDidMount() {
+    /*componentDidMount() {
         axios.get('http://localhost:3001/articles.json')
             .then(response => {
                 this.setState({
@@ -15,10 +18,14 @@ class ArticleList extends Component {
                 })
             })
             .catch(error => console.log(error))
+    }*/
+
+    componentDidMount() {
+        this.props.fetchArticles();
     }
 
     renderList() {
-        return this.state.articles.map( article => {
+        return this.props.articles.map( article => {
             return(
                 <div key={article.id}>
                     {/*<Link to={`/articles/${article.id}`}>
@@ -32,7 +39,7 @@ class ArticleList extends Component {
     }
 
     render() {
-        console.log(this.state.articles);
+        //console.log(this.state.articles);
         return (
             <div className="ArticleList">
                 {this.renderList()}
@@ -41,4 +48,13 @@ class ArticleList extends Component {
     }
 }
 
-export default ArticleList;
+//export default ArticleList;
+const mapStateToProps = (state) => {
+    return {
+        articles: Object.values(state.articles),
+        //currentUserId: state.auth.userId,
+        //isSignedIn: state.auth.isSignedIn
+    };
+};
+
+export default connect(mapStateToProps, { fetchArticles })(ArticleList);

@@ -7,4 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Article.create(title:"D Rose", content:"D Rose and the hero's journey")
+Article.create(title:"Test", content:"D Rose and the hero's journey")
