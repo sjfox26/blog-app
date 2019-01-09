@@ -41,11 +41,6 @@ class ArticleShow extends React.Component {
                     <p className="article__author">By <span className="article__author--text">{author}</span></p>
                     <h5 className="article__text">{this.renderContent(content)}</h5>
                 </div>
-                <Link to={'/'} className="link">
-                    <div className="header__container--article">
-                        <Header/>
-                    </div>
-                </Link>
             </div>
         );
     }
