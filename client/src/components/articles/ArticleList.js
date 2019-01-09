@@ -28,14 +28,14 @@ class ArticleList extends Component {
     renderList() {
         return this.props.articles.map( article => {
             return(
-                <div key={article.id}>
+                <div key={article.id} className="article__info">
                     <Link to={`/articles/${article.id}`} className="link">
-                        <div className="article__title">
+                        <div className="article-list__title">
                             <h2>{article.title}</h2>
                         </div>
-                        <div className="article__info">
-                            <h3 className="article__info--item">{article.description}</h3>
-                            <h4 className="article__info--item">{article.author}</h4>
+                        <div>
+                            <h3 className="article-list__description">{article.description}</h3>
+                            <h4 className="article-list__author">By {article.author}</h4>
                         </div>
                     </Link>
                 </div>

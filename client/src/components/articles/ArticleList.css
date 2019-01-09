@@ -1,7 +1,5 @@
 .ArticleList {
     margin-top: 3rem;
-    background-color: aquamarine;
-    text-transform: uppercase;
 }
 
 .header__container--list {
@@ -14,12 +12,20 @@
     /*font-family: Lato;*/
 }
 
-.article__title {
-    padding: 1rem;
+.article__info {
+    margin-top: 5rem;
 }
 
-.article__info--item {
-    padding: .3rem;
+.article-list__title {
+    margin-top: 3rem;
+}
+
+.article-list__description {
+    margin-top: 1rem;
+}
+
+.article-list__author {
+    margin-top: 1rem;
 }
 
 

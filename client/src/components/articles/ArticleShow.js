@@ -16,7 +16,7 @@ class ArticleShow extends React.Component {
         return (
             <div>
                 {text.split("\n").map((p,key) => {
-                    return <p key={key}>{p}</p>;
+                    return <p key={key} className="article__text--paragraph">{p}</p>;
                 })}
             </div>);
     }
@@ -26,7 +26,7 @@ class ArticleShow extends React.Component {
             return <div></div>
         }
 
-        const { title, description, content } = this.props.article;
+        const { title, description, content, author } = this.props.article;
 
         return (
             <div>
@@ -35,11 +35,17 @@ class ArticleShow extends React.Component {
                         <Header/>
                     </div>
                 </Link>
-                <div>
-                    <h1>{title}</h1>
-                    <h3>{description}</h3>
-                    <h5>{this.renderContent(content)}</h5>
+                <div className="article__container">
+                    <h1 className="article__title">{title}</h1>
+                    <p className="article__description">{description}</p>
+                    <p className="article__author">By <span className="article__author--text">{author}</span></p>
+                    <h5 className="article__text">{this.renderContent(content)}</h5>
                 </div>
+                <Link to={'/'} className="link">
+                    <div className="header__container--article">
+                        <Header/>
+                    </div>
+                </Link>
             </div>
         );
     }
