@@ -5,6 +5,7 @@ import { fetchArticles } from '../../actions/index';
 
 import './ArticleList.css';
 import Header from "../Header";
+import Footer from "../Footer";
 
 class ArticleList extends Component {
     /*state = {
@@ -31,11 +32,11 @@ class ArticleList extends Component {
                 <div key={article.id} className="article__info">
                     <Link to={`/articles/${article.id}`} className="link">
                         <div className="article-list__title">
-                            <h2>{article.title}</h2>
+                            <h3>{article.title}</h3>
                         </div>
                         <div>
-                            <h3 className="article-list__description">{article.description}</h3>
-                            <h4 className="article-list__author">By {article.author}</h4>
+                            <p className="article-list__description">{article.description}</p>
+                            <p className="article-list__author">By {article.author}</p>
                         </div>
                     </Link>
                 </div>
@@ -51,8 +52,10 @@ class ArticleList extends Component {
                     <Header />
                 </div>
                 <div className="ArticleList">
+                    <h1>Articles</h1>
                     {this.renderList()}
                 </div>
+                <Footer />
             </div>
         );
     }

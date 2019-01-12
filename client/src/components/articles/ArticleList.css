@@ -1,5 +1,20 @@
 .ArticleList {
-    margin-top: 3rem;
+    padding: 1.5rem 0 9.5rem 0;
+    background-color: #f9f9f9;
+}
+
+.ArticleList h1 {
+    display: block; /*since span is inline by default, like text*/
+    font-size: 3rem;
+    font-weight: 400;
+    color: #18192c;
+    text-transform: uppercase;
+    letter-spacing: .8rem;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid currentColor;
+    display: inline-block;
+    line-height: 4.7rem;
 }
 
 .header__container--list {
@@ -8,12 +23,14 @@
 
 .link {
     text-decoration: none;
-    color: #000;
+    color: #18192c;
+    font-weight: 400;
+    letter-spacing: .1rem;
     /*font-family: Lato;*/
 }
 
 .article__info {
-    margin-top: 5rem;
+    padding-top: 1rem;
 }
 
 .article-list__title {

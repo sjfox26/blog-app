@@ -6,6 +6,7 @@ import Header from "../Header";
 
 
 import './ArticleShow.css';
+import Footer from "../Footer";
 
 class ArticleShow extends React.Component {
     componentDidMount() {
@@ -26,7 +27,7 @@ class ArticleShow extends React.Component {
             return <div></div>
         }
 
-        const { title, description, content, author } = this.props.article;
+        const { title, description, content, author, date } = this.props.article;
 
         return (
             <div>
@@ -38,9 +39,11 @@ class ArticleShow extends React.Component {
                 <div className="article__container">
                     <h1 className="article__title">{title}</h1>
                     <p className="article__description">{description}</p>
+                    <p className="article__date">{date}</p>
                     <p className="article__author">By <span className="article__author--text">{author}</span></p>
                     <h5 className="article__text">{this.renderContent(content)}</h5>
                 </div>
+                <Footer />
             </div>
         );
     }
