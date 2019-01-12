@@ -1,24 +1,21 @@
-# README
+Blog App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Hero Image
+![screen shot 2019-01-11 at 10 52 16 am](https://user-images.githubusercontent.com/23299983/51067831-7b2bcd00-15db-11e9-9e5c-75d3a4c8a601.png)
 
-* Ruby version
 
-* System dependencies
+List of Articles
+![screen shot 2019-01-11 at 7 56 10 pm](https://user-images.githubusercontent.com/23299983/51067832-7e26bd80-15db-11e9-80c7-b2148d6205dc.png)
 
-* Configuration
 
-* Database creation
+Footer underneath List of Articles
+![screen shot 2019-01-11 at 7 56 24 pm](https://user-images.githubusercontent.com/23299983/51067833-7f57ea80-15db-11e9-95bc-f86dc77b246c.png)
 
-* Database initialization
 
-* How to run the test suite
+Individual Article
+![screen shot 2019-01-11 at 7 58 10 pm](https://user-images.githubusercontent.com/23299983/51067836-88e15280-15db-11e9-87c1-1cd2e966bd60.png)
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
+Individual Article with Footer
+![screen shot 2019-01-11 at 7 58 22 pm](https://user-images.githubusercontent.com/23299983/51067840-8d0d7000-15db-11e9-922d-392d407e4e88.png)
