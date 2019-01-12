@@ -45,7 +45,6 @@ class ArticleList extends Component {
     }
 
     render() {
-        //console.log(this.state.articles);
         return (
             <div>
                 <div className="header__container--list">
@@ -64,9 +63,7 @@ class ArticleList extends Component {
 //export default ArticleList;
 const mapStateToProps = (state) => {
     return {
-        articles: Object.values(state.articles),
-        //currentUserId: state.auth.userId,
-        //isSignedIn: state.auth.isSignedIn
+        articles: Object.values(state.articles)
     };
 };
 

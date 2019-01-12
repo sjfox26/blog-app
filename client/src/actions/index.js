@@ -1,6 +1,5 @@
 import articles from '../apis/articles';
 import { CREATE_ARTICLE, FETCH_ARTICLES, FETCH_ARTICLE, DELETE_ARTICLE, EDIT_ARTICLE } from "./types";
-import history from '../history'
 
 /*export const signIn = (userId) => {
     return {
@@ -15,13 +14,6 @@ export const signOut = () => {
     };
 };*/
 
-export const createArticle = formValues => async (dispatch, getState) => {
-    const { userId } = getState().auth;
-    const response = await articles.post('/articles', { ...formValues, userId });
-
-    dispatch({ type: CREATE_ARTICLE, payload: response.data });
-    history.push('/');
-};
 
 export const fetchArticles = () => async dispatch => {
     const response = await articles.get('/articles');
@@ -33,6 +25,15 @@ export const fetchArticle = (id) => async dispatch => {
     const response = await articles.get(`/articles/${id}`);
 
     dispatch({ type: FETCH_ARTICLE, payload: response.data });
+};
+
+/*
+export const createArticle = formValues => async (dispatch, getState) => {
+    const { userId } = getState().auth;
+    const response = await articles.post('/articles', { ...formValues, userId });
+
+    dispatch({ type: CREATE_ARTICLE, payload: response.data });
+    history.push('/');
 };
 
 export const editArticle = (id, formValues) => async dispatch => {
@@ -47,4 +48,4 @@ export const deleteArticle = (id) => async dispatch => {
 
     dispatch({ type: DELETE_ARTICLE, payload: id });
     history.push('/');
-};
+};*/
